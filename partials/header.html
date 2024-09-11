@@ -1,0 +1,107 @@
+<style>
+    .wallet-options-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .wallet-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60px; 
+        text-align: center;
+        cursor: pointer;
+        margin: 10px;
+        box-sizing: border-box; 
+    }
+    .wallet-option img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 5px;
+    }
+    .wallet-option span {
+        color: white;
+        font-size: 14px;
+    }
+</style>
+
+<body>    
+    <div class="header">
+        <div class='title-bar'>
+
+
+            <div class="des-btn-bar">
+                <div class="des-btn">
+                    <div class="icon-btn">
+                        <img src='images/icon.png'>
+                    </div>
+                </div>
+                <button class="dropdown-button" onclick="window.location.href='index.html'" onmouseenter="showDropdown('Home')" onmouseleave="hideDropdown('Home')" data-translate="home">Home</button>
+                <div id="Home" class="dropdown-content" onmouseenter="showDropdown('Home')" onmouseleave="hideDropdown('Home')"></div>
+                <div class="des-btn">
+                    <button class="dropdown-button" onclick="toggleDropdown('About')" onmouseenter="showDropdown('About')" onmouseleave="hideDropdown('About')" data-translate="about">About ∨</button>
+                    <div id="About" class="dropdown-content" onmouseenter="showDropdown('About')" onmouseleave="hideDropdown('About')">
+
+                        <a href="ProjectIntroduction.html" data-translate="project_introduction">Project Introduction</a>
+                        <a href="WhitePaper.html" data-translate="white_paper">WhitePaper</a>
+                    </div>
+                </div>
+
+                <div class="des-btn">
+                    <button class="dropdown-button" onclick="toggleDropdown('CEC_Token')" onmouseenter="showDropdown('CEC_Token')" onmouseleave="hideDropdown('CEC_Token')" data-translate="cec_token">CEC Token ∨</button>
+                    <div id="CEC_Token" class="dropdown-content" onmouseenter="showDropdown('CEC_Token')" onmouseleave="hideDropdown('CEC_Token')">
+                        <a href="https://app.ston.fi/swap?chartVisible=false&chartInterval=1w&ft=TON&tt=EQDSGTwPEbZp9bhRF9K4-sWlcjvORvglEOjDXVAt7YVy_hP3" data-translate="Buy_Token">Buy Tokens</a>
+                        <a href="https://www.geckoterminal.com/" data-translate="Token_Chart">Token Chart</a>                        
+                        <a href="https://app.ston.fi/liquidity/provide?ft=TON&tt=EQDSGTwPEbZp9bhRF9K4-sWlcjvORvglEOjDXVAt7YVy_hP3" data-translate="Token_Liquidity">Token Liquidity</a>
+                    </div>
+                </div>
+                <div class="des-btn">
+                    <button class="dropdown-button" onclick="toggleDropdown('JoinUs')" onmouseenter="showDropdown('JoinUs')" onmouseleave="hideDropdown('JoinUs')" data-translate="JoinUs">Join Us ∨</button>
+                    <div id="JoinUs" class="dropdown-content" onmouseenter="showDropdown('JoinUs')" onmouseleave="hideDropdown('JoinUs')">
+                        <a href="https://t.me/IdleFantasy" data-translate="Telegram">Telegram</a>
+                        <a href="https://x.com/IdleGog" data-translate="Twitter">Twitter</a>
+                        
+                    </div>
+                </div>
+                <div class="des-btn-lang">
+                    <div class="icon-lang" onmouseenter="showDropdown('Language')" onmouseleave="hideDropdown('Language')">
+                        <img src='images/header/language_icon.png'>
+                    </div>
+                    <div id="Language" class="dropdown-content" onmouseenter="showDropdown('Language')" onmouseleave="hideDropdown('Language')">
+                        <a href="#" onclick="changeLanguage('en')">English</a>
+                        <a href="#" onclick="changeLanguage('zh-CN')">简体中文</a>
+                        <a href="#" onclick="changeLanguage('zh-TW')">繁體中文</a>
+                        <a href="#" onclick="changeLanguage('ru')">Русский</a>
+                        <a href="#" onclick="changeLanguage('ar')">العربية</a>
+                        <a href="#" onclick="changeLanguage('es')">Español</a>
+                        <a href="#" onclick="changeLanguage('pt')">Português</a>
+                        <a href="#" onclick="changeLanguage('id')">Bahasa Indonesia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="floatingText" class="floating-text"></div>
+
+    <script src="web3/js/walletFunctions.js"></script>
+    <script src="web3/js/contactFunctions.js" ></script>
+    <script src="js/script.js"></script>
+    
+    <script>
+
+        loadTranslations();
+        // updateWalletButton();
+
+        // document.addEventListener('connectWallet', () => {
+        //     connectWallet();            
+        // });
+
+        // document.addEventListener('connectWalletDone', () => {
+        //     updateWalletButton();
+        //     initializeContracts();
+        // });
+
+    </script>
+</body>

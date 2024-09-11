@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="Idle Fantasy-PlayToEarn & Nft,NFT,Strategy,Idle,Card,Crypto,Blockchain,Challenges,Earn,Axie,CryptoKitties,Sandbox,DeFi,Gods,Mir">
+    <meta name="description" content="《Idle Fantasy-PlayToEarn & Nft》: Every Challenge is an Opportunity for Wealth and Adventure in NFT! Download Now!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+    <title data-translate="title">《Idle Fantasy-PlayToEarn & Nft》-Every Challenge is an Opportunity for Wealth and Adventure in NFT</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script> -->
+</head>
+<body>
+    <div id="header"></div>
+    <div id='bgDiv' class="bg">
+        <div class="container">
+            <div class="img-box">
+                <div style="visibility:hidden;"><img class="holderImg" src="images/holder.png" alt="Idle Fantasy-PlayToEarn & Nft"></div>
+                <div id="toastList" data-translate="coming_soon">
+                    game will coming soon。
+                </div>
+                <div class="btn-box">
+                    <p class="col-xs-text" data-translate="token_description">Join our CEC token-powered game on the TON chain! Play, earn, and grow with us—where fun meets real rewards.</p>
+                    <div class="col-xs-6" onclick="playNow()"><img src="images/an-meb.png" alt="Android《Idle Fantasy-PlayToEarn & Nft》"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="tokenInfo"></div> -->
+    <div id="back-c"></div>
+    <div id="bottom"></div>
+
+    <script src="js/elvactrl.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/language.js"></script>
+    <script src="web3/js/walletFunctions.js"></script>
+    <script src="web3/js/contactFunctions.js" ></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let filesLoaded = 0;
+            const files = [
+                { id: 'header', path: 'partials/header.html' },
+                { id: 'back-c', path: 'partials/back-c.html' },
+                { id: 'bottom', path: 'partials/bottom.html' }
+            ];
+
+            files.forEach(file => {
+                fetch(file.path)
+                    .then(response => response.text())
+                    .then(data => {
+                        // console.log("data = ",data);
+                        document.getElementById(file.id).innerHTML = data;
+
+                        const scriptTags = document.querySelectorAll(`#${file.id} script`);
+                        scriptTags.forEach(scriptTag => {
+                            const newScriptTag = document.createElement('script');
+                            newScriptTag.textContent = scriptTag.textContent;
+                            document.body.appendChild(newScriptTag);
+                        });
+
+                        filesLoaded++;
+                        if (filesLoaded === files.length) {
+                            // 所有文件加载完成后，调用 loadTranslations
+                            loadTranslations();
+                        }
+                    })
+                    .catch(error => console.error(`Error loading ${file.path}:`, error));
+            });
+
+        });
+
+        document.addEventListener('languageChange', () => {
+            loadTranslations();
+        });
+
+
+        loadTranslations();
+
+    </script>
+</body>
+</html>
