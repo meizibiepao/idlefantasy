@@ -281,7 +281,7 @@ async function addTestToken() {
                             address: '0x92f648689ec1187c20619951eea24c8f5752ebf4',
                             symbol: 'MCFTS',
                             decimals: 18,
-                            image: 'https://meizibiepao.github.io/my-website/images/tokenIcon/CatEarCoin.png',
+                            image: 'https://meizibiepao.github.io/idle_fantasy/images/tokenIcon/CatEarCoin.png',
                         },
                     },
                 });
@@ -299,7 +299,7 @@ async function addTestToken() {
                             address: '0x92f648689ec1187c20619951eea24c8f5752ebf4',
                             symbol: 'MCFTS',
                             decimals: 18,
-                            image: 'https://meizibiepao.github.io/my-website/images/tokenIcon/CatEarCoin.png',
+                            image: 'https://meizibiepao.github.io/idle_fantasy/images/tokenIcon/CatEarCoin.png',
                         },
                     },
                 });
